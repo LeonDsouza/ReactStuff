@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Component</title>
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/babel">
+	
+		var Comment = React.createClass({});
+		
+		var Board = React.createClass({
+		
+			getInitialState(){
+				return{
+					comments[
+						'comment1',
+						'comment2',
+						'comment3'
+					]
+				};
+			},
+			
+			
+			render: function(){
+				return(<div className="board">
+					
+						this.state.comments.map(function(text,i)){   //for loop
+							return(<Comment key={i}> {text} </Comment>); 
+						}  
+					}
+				</div>);
+			}
+		})
+		
+		
+        ReactDOM.render(<Board />, document.getElementById('container'));
+    </script>
+
+</body>
+</html>
